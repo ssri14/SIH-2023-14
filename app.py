@@ -3,7 +3,6 @@ import streamlit as st
 import instaloader
 import json
 import csv
-#import os
 import sys
 import shutil
 import numpy as np
@@ -12,8 +11,6 @@ import time
 
 pickle_in = open("classifier.pkl","rb")
 model = pickle.load(pickle_in)
-
-classes = ["",0,1]
 
 def scrap(user):
     usrname = user
@@ -111,8 +108,6 @@ def main():
                 st.markdown('<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">', unsafe_allow_html=True)
 
                 if fake == 0:     
-                    # st.success('bhai tera to genuine hai')
-                    # st.markdown('<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">', unsafe_allow_html=True)
                     htmlstr = """
                     <style>
                     .green-tick {
