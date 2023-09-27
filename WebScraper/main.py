@@ -42,8 +42,8 @@ else:
 digit_count = sum(1 for char in profile.username if char.isdigit())
 
 data = [{
-    "FollowerCount": str(profile.followers),
-    "FollowingCount": str(profile.followees),
+    "FollowerCount": int(profile.followers),
+    "FollowingCount": int(profile.followees),
     "BioLength": len(profile.biography),
     "Posts":  profile.mediacount,
     "HasProfilePic": profile_pic,
